@@ -62,30 +62,38 @@ export default function ParkingFeeCalculator() {
           </div>
           <div>
             <label className="block font-medium">昼間料金 (円/分):</label>
-            <input
-              type="number"
-              value={dayRate}
-              onChange={(e) => setDayRate(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
-          </div>
-          <div>
-            <label className="block font-medium">昼間料金の間隔 (分):</label>
-            <input
-              type="number"
-              value={dayInterval}
-              onChange={(e) => setDayInterval(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
+            <div className="flex space-x-4">
+              <div className="flex-1 flex items-center">
+                <input
+                  type="number"
+                  value={dayRate}
+                  onChange={(e) => setDayRate(Number(e.target.value))}
+                  className="w-full p-2 border rounded"
+                />
+                <span className="ml-2">円</span>
+              </div>
+              <div className="flex-1 flex items-center">
+                <input
+                  type="number"
+                  value={dayInterval}
+                  onChange={(e) => setDayInterval(Number(e.target.value))}
+                  className="w-full p-2 border rounded"
+                />
+                <span className="ml-2">分</span>
+              </div>
+            </div>
           </div>
           <div>
             <label className="block font-medium">昼間最大料金 (円):</label>
-            <input
-              type="number"
-              value={dayMax}
-              onChange={(e) => setDayMax(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
+            <div className="flex-1 flex items-center">
+              <input
+                type="number"
+                value={dayMax}
+                onChange={(e) => setDayMax(Number(e.target.value))}
+                className="w-full p-2 border rounded"
+              />
+              <span className="ml-2">円</span>
+            </div>
           </div>
           <div>
             <label className="block font-medium">夜間の時間範囲:</label>
@@ -106,30 +114,38 @@ export default function ParkingFeeCalculator() {
           </div>
           <div>
             <label className="block font-medium">夜間料金 (円/分):</label>
-            <input
-              type="number"
-              value={nightRate}
-              onChange={(e) => setNightRate(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
-          </div>
-          <div>
-            <label className="block font-medium">夜間料金の間隔 (分):</label>
-            <input
-              type="number"
-              value={nightInterval}
-              onChange={(e) => setNightInterval(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
+            <div className="flex space-x-4">
+              <div className="flex-1 flex items-center">
+                <input
+                  type="number"
+                  value={nightRate}
+                  onChange={(e) => setNightRate(Number(e.target.value))}
+                  className="w-full p-2 border rounded"
+                />
+                <span className="ml-2">円</span>
+              </div>
+              <div className="flex-1 flex items-center">
+                <input
+                  type="number"
+                  value={nightInterval}
+                  onChange={(e) => setNightInterval(Number(e.target.value))}
+                  className="w-full p-2 border rounded"
+                />
+                <span className="ml-2">分</span>
+              </div>
+            </div>
           </div>
           <div>
             <label className="block font-medium">夜間最大料金 (円):</label>
-            <input
-              type="number"
-              value={nightMax}
-              onChange={(e) => setNightMax(Number(e.target.value))}
-              className="w-full p-2 border rounded"
-            />
+            <div className="flex-1 flex items-center">
+              <input
+                type="number"
+                value={nightMax}
+                onChange={(e) => setNightMax(Number(e.target.value))}
+                className="w-full p-2 border rounded"
+              />
+              <span className="ml-2">円</span>
+            </div>
           </div>
           <button
             onClick={calculateFee}
