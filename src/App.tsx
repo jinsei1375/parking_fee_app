@@ -22,7 +22,7 @@ export default function ParkingFeeCalculator() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-yellow-100 p-8 overflow-auto">
-      <div className="bg-blue-400 p-6 rounded-2xl shadow-lg w-96 m-4">
+      <div className="bg-blue-400 p-6 rounded-2xl shadow-lg w-96">
         <h1 className="text-xl font-bold mb-4 text-center">パーキング料金計算</h1>
         <div className="space-y-4">
           <div>
@@ -31,7 +31,7 @@ export default function ParkingFeeCalculator() {
               type="datetime-local"
               value={entryTime}
               onChange={(e) => setEntryTime(e.target.value)}
-              className="w-full p-2 border rounded"
+              className="max-w-xs p-2 border rounded"
             />
           </div>
           <div>
@@ -40,7 +40,7 @@ export default function ParkingFeeCalculator() {
               type="datetime-local"
               value={exitTime}
               onChange={(e) => setExitTime(e.target.value)}
-              className="w-full p-2 border rounded"
+              className="max-w-xs p-2 border rounded"
             />
           </div>
           <div>
@@ -85,12 +85,12 @@ export default function ParkingFeeCalculator() {
           </div>
           <div>
             <label className="block font-medium">昼間最大料金 (円):</label>
-            <div className="flex-1 flex items-center">
+            <div className="flex-1 flex items-center justify-center">
               <input
                 type="number"
                 value={dayMax}
                 onChange={(e) => setDayMax(Number(e.target.value))}
-                className="w-full p-2 border rounded"
+                className="max-w-xs p-2 border rounded"
               />
               <span className="ml-2">円</span>
             </div>
@@ -137,12 +137,12 @@ export default function ParkingFeeCalculator() {
           </div>
           <div>
             <label className="block font-medium">夜間最大料金 (円):</label>
-            <div className="flex-1 flex items-center">
+            <div className="flex-1 flex items-center justify-center">
               <input
                 type="number"
                 value={nightMax}
                 onChange={(e) => setNightMax(Number(e.target.value))}
-                className="w-full p-2 border rounded"
+                className="max-w-xs p-2 border rounded"
               />
               <span className="ml-2">円</span>
             </div>
